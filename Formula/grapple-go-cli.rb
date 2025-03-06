@@ -17,11 +17,7 @@ class GrappleGoCli < Formula
 
   def caveats
     <<~EOS
-      The required template files and additional files are installed at:
-        $(brew --prefix)/share/grapple-go-cli/template-files
-        $(brew --prefix)/share/grapple-go-cli/files
-
-      The CLI automatically finds these files when executed.
+      Run 'grapple help' to check the list of avaiable commands
     EOS
   end
 
