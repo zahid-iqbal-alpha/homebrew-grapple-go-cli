@@ -7,8 +7,8 @@ class GrappleGoCli < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", "grpl", "main.go"
-    bin.install "grpl"
+    system "go", "build", "-o", "grapple", "main.go"
+    bin.install "grapple"
 
     # Install additional required directories
     (share/"grapple-go-cli").install "template-files"
@@ -26,6 +26,6 @@ class GrappleGoCli < Formula
   end
 
   test do
-    system "#{bin}/grpl", "help"
+    system "#{bin}/grapple", "help"
   end
 end
