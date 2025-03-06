@@ -1,7 +1,3 @@
-require "open-uri"
-require "json"
-require "digest"
-
 class GrappleGoCli < Formula
   desc "Command-line interface for Grapple"
   homepage "https://github.com/grapple-solution/grapple-go-cli"
@@ -13,6 +9,20 @@ class GrappleGoCli < Formula
   def install
     system "go", "build", "-o", "grpl", "main.go"
     bin.install "grpl"
+
+    # Install additional required directories
+    (share/"grapple-go-cli").install "template-files"
+    (share/"grapple-go-cli").install "files"
+  end
+
+  def caveats
+    <<~EOS
+      The required template files and additional files are installed at:
+        $(brew --prefix)/share/grapple-go-cli/template-files
+        $(brew --prefix)/share/grapple-go-cli/files
+
+      The CLI automatically finds these files when executed.
+    EOS
   end
 
   test do
