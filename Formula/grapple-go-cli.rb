@@ -2,7 +2,7 @@ class GrappleGoCli < Formula
   desc "Command-line interface for Grapple"
   homepage "https://github.com/grapple-solution/grapple-go-cli"
 
-  url "https://github.com/grapple-solution/grapple-go-cli/archive/refs/tags/test.tar.gz"
+  url "https://github.com/grapple-solution/grapple-go-cli/archive/refs/tags/0.0.3.tar.gz"
 
   depends_on "go" => :build
 
