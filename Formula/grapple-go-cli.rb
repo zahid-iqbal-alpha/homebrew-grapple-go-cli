@@ -11,8 +11,8 @@ class GrappleGoCli < Formula
     bin.install "grapple"
 
     # Install additional required directories
-    (share/"grapple-go-cli").install "template-files"
-    (share/"grapple-go-cli").install "files"
+    (bin/"files").install Dir["files/*"]
+    (bin/"template-files").install Dir["template-files/*"]
   end
 
   def caveats
