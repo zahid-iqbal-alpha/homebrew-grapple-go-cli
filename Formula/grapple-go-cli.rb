@@ -7,12 +7,13 @@ class GrappleGoCli < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", "grapple", "main.go"
-    bin.install "grapple"
+    system "go", "build", "-o", "grapple-test", "main.go"
+    bin.install "grapple-test"
+
 
     # Install additional required directories
-    (bin/"files").install Dir["files/*"]
-    (bin/"template-files").install Dir["template-files/*"]
+    (share/"grapple-go-cli").install "template-files"
+    (share/"grapple-go-cli").install "files"
   end
 
   def caveats
