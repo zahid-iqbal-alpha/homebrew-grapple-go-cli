@@ -1,4 +1,4 @@
-class GrappleGoCli < Formula
+class GrappleGoTestCli < Formula
   desc "Command-line interface for Grapple"
   homepage "https://github.com/grapple-solution/grapple-go-cli"
 
